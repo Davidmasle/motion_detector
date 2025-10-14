@@ -7,23 +7,25 @@ Motion Detector - мини проект для детекции движения
 ---
 
 ## Структура проекта
+```
 motion_detector/
 ├─ api/
-│ └─ app.py 
+│  └─ app.py
 ├─ detector/
-│ ├─ motion_detector.py
-│ └─ utils.py
-├─ logs/ 
-├─ output/ 
-├─ main.py # Основной скрипт запуска
-├─ requirements.txt 
-└─ Dockerfile 
-
+│  ├─ motion_detector.py
+│  └─ utils.py
+├─ logs/
+├─ output/
+├─ main.py   
+├─ requirements.txt
+└─ Dockerfile
+```
 ---
 
 ## Локальный запуск
-
+```bash
 git clone <https://github.com/Davidmasle/motion_detector.git>
+
 cd motion_detector
 
 docker build -t motion_detector:latest .
@@ -34,7 +36,7 @@ docker run --rm -it \
   -v $(pwd)/output:/app/output \
   -p 5000:5000 \
   motion_detector:latest
-
+```
 
 Flask API
 Доступен на http://localhost:5000
